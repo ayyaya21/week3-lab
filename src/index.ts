@@ -1,5 +1,4 @@
 import "dotenv/config";
-
 import { eq } from 'drizzle-orm';
 import { Hono } from 'hono'
 import { users } from './db/schema';

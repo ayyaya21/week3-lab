@@ -3,7 +3,19 @@ import { eq } from 'drizzle-orm';
 import { Hono } from 'hono'
 import { users } from './db/schema';
 import db from './db';
+import { bearerAuth } from "hono/bearer-auth";
+import { env } from "hono/adapter";
 const app = new Hono()
+
+app.use(
+    "/*",
+    bearerAuth({
+      verifyToken: async (token, c) => {
+        const { SECRET_PASSWORD } = env<{ SECRET_PASSWORD: string }>(c);
+        return token === SECRET_PASSWORD;
+      },
+    })
+  );
 
 app.get("/", async (c) => {
     const users = await db.query.users.findMany()

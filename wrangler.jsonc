@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "week3-lab",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-07-23",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "TURSO_CONNECTION_URL": "libsql://lab-ayyaya21.aws-ap-northeast-1.turso.io",
+    "TURSO_AUTH_TOKEN": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJleHAiOjE3NTM4OTgzMTMsImlhdCI6MTc1MzI5MzUxMywiaWQiOiI2ZjQxZTNjMC0wMWJjLTQ0NzUtODI1OC1hMjY2OTg0MjVlMjgiLCJyaWQiOiI0Nzg5ZGE4Yy0yYzg5LTRhMGEtYTQxNy02OTI0NGY1M2U3ODUifQ.RZfIgzAhVY3pM2llVHQps3jeZU1Nj7CjzRpPyRTXa8qalLydNNumEHMnU7Nxlxx01-2E8Y8BSOmwiPwuED9WDw"
+  },
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "MY_KV_NAMESPACE",
+  //     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  //   }
+  // ],
+  // "r2_buckets": [
+  //   {
+  //     "binding": "MY_BUCKET",
+  //     "bucket_name": "my-bucket"
+  //   }
+  // ],
+  // "d1_databases": [
+  //   {
+  //     "binding": "MY_DB",
+  //     "database_name": "my-database",
+  //     "database_id": ""
+  //   }
+  // ],
+  // "ai": {
+  //   "binding": "AI"
+  // },
+  // "observability": {
+  //   "enabled": true,
+  //   "head_sampling_rate": 1
+  // }
+}

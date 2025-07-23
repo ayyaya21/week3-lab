@@ -14,7 +14,7 @@ app.get("/", async (c) => {
 app.get("/:id", async (c) => {
     const id = c.req.param('id')
     const user = await db.query.users.findFirst({
-        where: eq(users, Number(id))
+        where: eq(users.id, Number(id))
     })
     return c.json(user)
 })
